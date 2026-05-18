@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Insighta — The adaptive learning ecosystem</title>
+    <meta
+      name="description"
+      content="Transform static classrooms into living, responsive learning environments. Real-time adaptation for schools and universities."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      id="font-loader"
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Instrument+Serif:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="palette-teal font-editorial">
+    <!-- Theme controls -->
+    <aside class="theme-panel" aria-label="Design exploration controls">
+      <button type="button" class="theme-panel__toggle" aria-expanded="true" aria-controls="theme-panel-content">
+        <span class="theme-panel__toggle-label">Explore</span>
+        <span class="theme-panel__chevron" aria-hidden="true"></span>
+      </button>
+      <div id="theme-panel-content" class="theme-panel__content">
+        <p class="theme-panel__title">Palette</p>
+        <div class="theme-panel__group" role="group" aria-label="Color palette">
+          <button type="button" class="chip chip--palette is-active" data-palette="teal" aria-pressed="true">Teal</button>
+          <button type="button" class="chip chip--palette" data-palette="deep-blue" aria-pressed="false">Deep blue</button>
+          <button type="button" class="chip chip--palette" data-palette="emerald" aria-pressed="false">Emerald</button>
+        </div>
+        <p class="theme-panel__title">Typography</p>
+        <div class="theme-panel__group" role="group" aria-label="Font pairing">
+          <button type="button" class="chip chip--font is-active" data-font="editorial" aria-pressed="true">Editorial</button>
+          <button type="button" class="chip chip--font" data-font="modern" aria-pressed="false">Modern</button>
+          <button type="button" class="chip chip--font" data-font="humanist" aria-pressed="false">Humanist</button>
+          <button type="button" class="chip chip--font" data-font="technical" aria-pressed="false">Technical</button>
+        </div>
+        <p class="theme-panel__title">Presets</p>
+        <div class="theme-panel__group theme-panel__group--presets" role="group" aria-label="Full design presets">
+          <button type="button" class="chip chip--preset is-active" data-preset="atelier" aria-pressed="true">Atelier</button>
+          <button type="button" class="chip chip--preset" data-preset="observatory" aria-pressed="false">Observatory</button>
+          <button type="button" class="chip chip--preset" data-preset="studio" aria-pressed="false">Studio</button>
+          <button type="button" class="chip chip--preset" data-preset="lectern" aria-pressed="false">Lectern</button>
+          <button type="button" class="chip chip--preset" data-preset="lab" aria-pressed="false">Lab</button>
+        </div>
+      </div>
+    </aside>
+
+    <header class="site-header">
+      <a href="#" class="logo">Insighta</a>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="#platform">Platform</a>
+        <a href="#ecosystem">Ecosystem</a>
+        <a href="#institutions">Institutions</a>
+      </nav>
+      <a class="btn btn--ghost" href="#contact">Request access</a>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero__grid">
+          <div class="hero__copy reveal" style="--delay: 0ms">
+            <p class="eyebrow">AI-powered learning infrastructure</p>
+            <h1 class="hero__title">
+              The classroom,<br />
+              <em>alive</em> at last.
+            </h1>
+            <p class="hero__lede">
+              For decades, teaching lived inside static systems—slides, notes, quizzes, delayed assessment. Insighta turns the room into a
+              real-time, adaptive ecosystem: lectures that respond, concepts that stay interactive, and confusion surfaced the moment it
+              appears.
+            </p>
+            <div class="hero__actions">
+              <a class="btn btn--primary" href="#contact">See the platform</a>
+              <a class="btn btn--text" href="#ecosystem">How it works</a>
+            </div>
+          </div>
+          <div class="hero__visual reveal" style="--delay: 120ms">
+            <div class="mock-frame">
+              <div class="mock-frame__chrome">
+                <span></span><span></span><span></span>
+                <span class="mock-frame__title">Live session · Organic chemistry</span>
+              </div>
+              <div class="mock-frame__body">
+                <div class="signal-diagram" aria-hidden="true">
+                  <svg class="signal-diagram__svg" viewBox="0 0 400 280" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                      <linearGradient id="wire" x1="0" y1="0" x2="1" y2="0">
+                        <stop offset="0%" stop-color="var(--accent)" stop-opacity="0.15" />
+                        <stop offset="50%" stop-color="var(--accent)" stop-opacity="0.85" />
+                        <stop offset="100%" stop-color="var(--accent)" stop-opacity="0.15" />
+                      </linearGradient>
+                    </defs>
+                    <rect x="24" y="40" width="120" height="56" rx="8" class="diagram-node diagram-node--in" />
+                    <rect x="240" y="32" width="136" height="72" rx="10" class="diagram-node diagram-node--core" />
+                    <rect x="32" y="180" width="100" height="48" rx="8" class="diagram-node diagram-node--out" />
+                    <rect x="200" y="188" width="152" height="56" rx="8" class="diagram-node diagram-node--feedback" />
+                    <path class="diagram-path diagram-path--a" d="M144 68h88c16 0 28 12 28 28v8" />
+                    <path class="diagram-path diagram-path--b" d="M308 104v64c0 14-10 24-24 24h-40" />
+                    <path class="diagram-path diagram-path--c" d="M276 216H160c-12 0-22-8-24-20" />
+                    <path class="diagram-path diagram-path--d" d="M132 180V120c0-10 8-18 18-18h30" />
+                    <circle class="diagram-pulse" r="4" />
+                  </svg>
+                </div>
+                <div class="live-strip">
+                  <span class="live-strip__dot"></span>
+                  <span class="live-strip__text">Concept clarity rising in Section B</span>
+                  <span class="live-strip__metric">+18%</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--contrast" id="platform">
+        <div class="section__inner">
+          <div class="section__header reveal">
+            <p class="eyebrow">Beyond classroom software</p>
+            <h2 class="section__title">A new educational <em>nervous system</em></h2>
+            <p class="section__intro">
+              Not another layer on top of PDFs and slide decks—a coordinated loop of perception, adaptation, and human judgment. Insighta
+              reads the room, preserves pedagogical intent, and gives every learner a path through difficulty without flattening the
+              discipline.
+            </p>
+          </div>
+          <div class="pillar-grid">
+            <article class="pillar reveal" style="--delay: 0ms">
+              <span class="pillar__index">01</span>
+              <h3 class="pillar__title">Perceive</h3>
+              <p class="pillar__copy">Signals from participation, questions, and micro-checks form a live map of understanding—never a surveillance scoreboard.</p>
+            </article>
+            <article class="pillar reveal" style="--delay: 80ms">
+              <span class="pillar__index">02</span>
+              <h3 class="pillar__title">Adapt</h3>
+              <p class="pillar__copy">Pacing, examples, and scaffolds shift in the moment while you stay in control of outcomes and rigor.</p>
+            </article>
+            <article class="pillar reveal" style="--delay: 160ms">
+              <span class="pillar__index">03</span>
+              <h3 class="pillar__title">Close the loop</h3>
+              <p class="pillar__copy">Same-session remediation, cohort insights, and exportable artifacts institutions already trust.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--modules" id="ecosystem">
+        <div class="section__inner">
+          <div class="split reveal">
+            <div class="split__text">
+              <p class="eyebrow">Product surface</p>
+              <h2 class="section__title">Modules that feel <em>inhabited</em></h2>
+              <p class="section__intro">
+                Dynamic lesson cards, branching explanations, and collaborative surfaces replace the “upload and hope” workflow. Each block
+                is designed to be edited, shared, and observed—like a living syllabus.
+              </p>
+            </div>
+            <div class="split__media">
+              <div class="module-stack">
+                <article class="module-card module-card--back">
+                  <header><span class="module-card__tag">Archive</span><time>Week 4</time></header>
+                  <h4>Equilibrium &amp; kinetics</h4>
+                  <p class="module-card__meta">12 learners · 3 open threads</p>
+                </article>
+                <article class="module-card module-card--front">
+                  <header><span class="module-card__tag module-card__tag--live">Live</span><time>Now</time></header>
+                  <h4>Reaction coordinates</h4>
+                  <div class="module-card__bars" aria-hidden="true">
+                    <span style="--w: 72%"></span>
+                    <span style="--w: 45%"></span>
+                    <span style="--w: 88%"></span>
+                    <span style="--w: 36%"></span>
+                  </div>
+                  <p class="module-card__hint">Tutor suggested: alternate energy diagram</p>
+                </article>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--viz">
+        <div class="section__inner">
+          <div class="viz-layout reveal">
+            <div class="viz-layout__intro">
+              <p class="eyebrow">Real-time clarity</p>
+              <h2 class="section__title">Confusion, <em>addressed</em> as it forms</h2>
+              <p class="section__intro">
+                Gentle aggregates show where concepts snag—before the exam, before the survey, before the semester slips away.
+              </p>
+            </div>
+            <div class="viz-panel">
+              <div class="viz-panel__header">
+                <span>Session heatmap</span>
+                <span class="viz-panel__badge">Updated live</span>
+              </div>
+              <div class="heatmap" role="img" aria-label="Abstract heatmap of concept engagement across four topics">
+                <div class="heatmap__cell" style="--intensity: 0.35"><span>Foundations</span></div>
+                <div class="heatmap__cell" style="--intensity: 0.72"><span>Core idea</span></div>
+                <div class="heatmap__cell" style="--intensity: 0.55"><span>Edge cases</span></div>
+                <div class="heatmap__cell" style="--intensity: 0.9"><span>Synthesis</span></div>
+              </div>
+              <div class="viz-panel__footer">
+                <div class="sparkline" aria-hidden="true">
+                  <svg viewBox="0 0 120 32" preserveAspectRatio="none">
+                    <polyline class="sparkline__line" points="0,24 12,20 24,22 36,14 48,16 60,8 72,12 84,6 96,10 108,4 120,8" />
+                  </svg>
+                </div>
+                <p>Intervention window: <strong>next 6 minutes</strong></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--scene" id="institutions">
+        <div class="section__inner">
+          <div class="scene reveal">
+            <div class="scene__frame">
+              <div class="scene__room">
+                <div class="scene__board"></div>
+                <div class="scene__rows" aria-hidden="true"></div>
+                <div class="scene__glow"></div>
+              </div>
+              <div class="scene__caption">
+                <p class="eyebrow">Built for institutions</p>
+                <h2 class="section__title">Credible where it <em>counts</em></h2>
+                <p class="section__intro">
+                  SSO, data residency options, accessibility-first surfaces, and workflows that respect departmental governance. Forward-thinking
+                  schools and universities get a product that feels like the future—without asking faculty to become prompt engineers.
+                </p>
+                <ul class="scene__list">
+                  <li>FERPA-aware architecture patterns</li>
+                  <li>Role-aware dashboards for chairs &amp; leads</li>
+                  <li>Human-in-the-loop by default</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--cta" id="contact">
+        <div class="cta-block reveal">
+          <h2 class="cta-block__title">Bring your next cohort into a living classroom.</h2>
+          <p class="cta-block__lede">We partner with a small number of institutions each term to tune Insighta to your curriculum reality.</p>
+          <div class="cta-block__actions">
+            <a class="btn btn--primary" href="mailto:hello@insighta.example">hello@insighta.example</a>
+            <span class="cta-block__note">Pilot programs · 2026</span>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span class="logo logo--muted">Insighta</span>
+      <p class="site-footer__meta">© Insighta. Concept landing for institutional learning teams.</p>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>
