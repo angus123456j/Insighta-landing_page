@@ -45,6 +45,7 @@ body {
   color: var(--ink);
   background: #ffffff;
   min-height: 100vh;
+  overflow-x: clip;
   -webkit-font-smoothing: antialiased;
   font-kerning: normal;
   font-variant-ligatures: common-ligatures contextual;
@@ -263,6 +264,7 @@ a {
   position: relative;
   min-height: 100svh;
   background: transparent;
+  overflow-x: clip;
 }
 
 .home__topbar {
@@ -2350,9 +2352,10 @@ a {
   }
 
   .home__hero-image {
-    width: clamp(288px, 90vw, 540px);
-    max-height: clamp(360px, 80vw, 640px);
-    transform: translateX(clamp(8px, 2vw, 18px));
+    width: min(100%, clamp(260px, 88vw, 540px));
+    max-height: clamp(320px, 55vh, 640px);
+    transform: none;
+    margin-inline: auto;
   }
 }
 
@@ -2364,6 +2367,231 @@ a {
   .home__subtitle {
     font-size: clamp(1.45rem, 6vw, 2rem);
     white-space: normal;
+  }
+}
+
+/* Mobile — tablets and phones */
+@media (max-width: 768px) {
+  :root {
+    --home-rail: min(1400px, calc(100% - 32px));
+  }
+
+  .home__hero {
+    min-height: auto;
+    padding:
+      max(12px, env(safe-area-inset-top, 0px))
+      0
+      clamp(20px, 4vh, 32px);
+  }
+
+  .home__hero-shell {
+    min-height: 0;
+    padding: clamp(22px, 5vw, 28px) clamp(18px, 4vw, 22px);
+    gap: 20px;
+    border-radius: var(--radius-lg);
+  }
+
+  .home__hero-copy {
+    padding-right: 0;
+    font-size: 15px;
+    text-align: center;
+    align-items: center;
+  }
+
+  .home__hero-eyebrow {
+    margin-bottom: 10px;
+  }
+
+  .home__hero-media {
+    width: 100%;
+  }
+
+  .home__hero-image {
+    width: min(100%, 400px);
+    max-height: min(48vh, 360px);
+    margin-inline: auto;
+    transform: none;
+  }
+
+  .home__subtitle {
+    max-width: none;
+    text-align: center;
+  }
+
+  .home__body {
+    text-align: center;
+  }
+
+  .home__buttons {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+    gap: 10px;
+  }
+
+  .home__btn {
+    justify-content: center;
+    width: 100%;
+    min-height: 48px;
+  }
+
+  .home__features {
+    margin-top: 0;
+    padding-top: clamp(8px, 2vw, 16px);
+  }
+
+  .home__feature-shell,
+  .home__feature-shell--reverse {
+    padding: clamp(20px, 5vw, 24px) clamp(16px, 4vw, 20px);
+    gap: 20px;
+    border-radius: var(--radius-lg);
+  }
+
+  .home__feature-heading {
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 14px;
+  }
+
+  .home__feature-index {
+    font-size: 2rem;
+  }
+
+  .home__feature-headline {
+    font-size: clamp(1.35rem, 5.5vw, 1.65rem);
+  }
+
+  .home__feature-body {
+    margin-bottom: 20px;
+  }
+
+  .home__feature-visual {
+    min-height: 220px;
+  }
+
+  .home__feature-visual--connect {
+    min-height: 320px;
+  }
+
+  .classroom-radar {
+    min-height: 260px;
+    padding: 12px;
+  }
+
+  .after-class-map {
+    padding: 16px;
+    overflow: hidden;
+  }
+
+  .connect-support {
+    min-height: 340px;
+  }
+
+  .connect-support__thread {
+    justify-content: flex-start;
+    max-height: min(68vh, 500px);
+  }
+
+  .connect-support__row--bot .connect-support__bubble--bot {
+    max-width: 100%;
+  }
+
+  .home__mini-grid,
+  .home__mini-grid--map,
+  .home__mini-grid--connect {
+    grid-template-columns: 1fr;
+  }
+
+  .home__waitlist-band {
+    padding: clamp(28px, 6vw, 40px) clamp(18px, 4vw, 22px);
+    border-radius: var(--radius-lg);
+  }
+
+  .home__waitlist-input {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --home-rail: min(1400px, calc(100% - 24px));
+  }
+
+  .home__title {
+    font-size: clamp(2.5rem, 11vw, 3.25rem);
+  }
+
+  .home__subtitle {
+    font-size: clamp(1.15rem, 5vw, 1.4rem);
+  }
+
+  .home__hero-shell {
+    padding: 20px 16px;
+  }
+
+  .home__hero-image {
+    max-height: min(42vh, 300px);
+  }
+
+  .home__feature-headline {
+    font-size: clamp(1.25rem, 5.2vw, 1.45rem);
+  }
+
+  .after-class-map__bars {
+    gap: 4px;
+    height: 96px;
+    padding-top: 16px;
+  }
+
+  .after-class-map__bar-track {
+    height: 68px;
+  }
+
+  .after-class-map__question {
+    width: 14px;
+    height: 14px;
+    margin-left: -7px;
+    font-size: 0.55rem;
+  }
+
+  .connect-support__header-title {
+    font-size: 0.72rem;
+  }
+
+  .connect-support__cal-grid {
+    gap: 4px;
+  }
+
+  .connect-support__cal-day {
+    padding: 5px 2px;
+  }
+
+  .connect-support__cal-day-label {
+    font-size: 0.56rem;
+  }
+
+  .connect-support__cal-day-num {
+    font-size: 0.85rem;
+  }
+
+  .connect-support__cal-slot {
+    font-size: 0.68rem;
+    padding: 8px 10px;
+    min-height: 36px;
+  }
+
+  .connect-support__bubble {
+    padding: 12px 14px;
+    font-size: 0.88rem;
+  }
+
+  .connect-support__picker-btn {
+    min-height: 40px;
+    font-size: 0.7rem;
+  }
+
+  .home__waitlist-title {
+    font-size: clamp(1.45rem, 6.5vw, 1.85rem);
   }
 }
 
