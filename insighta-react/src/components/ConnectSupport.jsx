@@ -194,8 +194,8 @@ export default function ConnectSupport() {
               <>
                 <div className="connect-support__bubble connect-support__bubble--bot">
                   <p className="connect-support__bot-lead">
-                    You&apos;ve asked about this a few times. Here&apos;s the calendar — you can book{' '}
-                    <strong>office hour</strong> or <strong>TA session</strong>.
+                    You&apos;ve asked about this a few times. Here&apos;s the calendar, I encourage you to book{' '}
+                    <strong>office hour</strong> or <strong>TA sessions</strong>.
                   </p>
 
                   <div className="connect-support__picker" role="tablist" aria-label="Help type">
